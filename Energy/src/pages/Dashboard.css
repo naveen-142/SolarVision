@@ -1,0 +1,84 @@
+.dashboard-container {
+  padding: 30px;
+  color: white;
+  padding-top: 100px;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.kpi-card:hover {
+  transform: scale(1.04);
+  background: #272727;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.summary-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+.loss-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.loss-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.timeseries-table,
+.panel-table {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
+.premium-upgrade-box {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.premium-btn-box {
+  margin-top: 15px;
+}

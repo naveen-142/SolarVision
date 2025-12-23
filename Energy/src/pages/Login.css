@@ -1,0 +1,167 @@
+/* ===============================
+   LOGIN PAGE – CLEAN & CLEAR UI
+   =============================== */
+
+.login-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(0, 255, 120, 0.35), transparent 55%),
+    radial-gradient(circle at bottom, rgba(0, 120, 40, 0.45), transparent 60%),
+    linear-gradient(135deg, #031a03, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+/* ---------- Glass Card ---------- */
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 3rem 2.8rem;
+  border-radius: 26px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.07)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.65),
+    inset 0 0 40px rgba(255, 255, 255, 0.04);
+  color: #fff;
+  animation: loginFade 0.7s ease;
+}
+
+@keyframes loginFade {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Title ---------- */
+.login-card h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Form Floating Container ---------- */
+.login-card .form-floating {
+  position: relative;
+}
+
+/* ---------- Inputs ---------- */
+.login-card .form-control {
+  height: 58px;
+  border-radius: 18px;
+  padding-top: 1.4rem;     /* space for floating label */
+  padding-bottom: 0.6rem;
+  padding-left: 3.4rem;   /* space for left icon */
+  padding-right: 3.2rem;  /* space for eye icon */
+  background: rgba(255, 255, 255, 0.95);
+  color: #1b1b1b;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.login-card .form-control::placeholder {
+  color: transparent; /* IMPORTANT for form-floating */
+}
+
+.login-card .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.45);
+  transform: scale(1.02);
+}
+
+/* ---------- Floating Labels ---------- */
+.login-card .form-floating label {
+  padding-left: 3.4rem;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Floating animation fix */
+.login-card .form-floating > .form-control:focus ~ label,
+.login-card .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  transform: scale(0.85) translateY(-1.1rem) translateX(0.15rem);
+  opacity: 0.85;
+}
+
+/* ---------- Left Icons ---------- */
+.login-card .form-floating svg {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #1e7f43;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* ---------- Eye Icon ---------- */
+.login-card .form-floating span {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #1e7f43;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.login-card .form-floating span:hover {
+  transform: translateY(-50%) scale(1.25);
+  color: #2ecc71;
+}
+
+/* ---------- Login Button ---------- */
+.login-card .btn {
+  height: 52px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1e7f43, #2ecc71);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #fff;
+  transition: all 0.35s ease;
+}
+
+.login-card .btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(46, 204, 113, 0.55);
+}
+
+/* ---------- Signup Text ---------- */
+.login-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.login-card p span {
+  color: #00e676;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.login-card p span:hover {
+  color: #69f0ae;
+  text-decoration: underline;
+}
+
+/* ---------- Alerts ---------- */
+.alert {
+  border-radius: 14px;
+  font-size: 0.9rem;
+}
